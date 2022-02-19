@@ -1,0 +1,52 @@
+section {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: repeat (5, 1fr);
+    grid-template-rows: repeat (5, 1fr);
+    grid-template-areas: "header header header header header"
+                         "nav content content content aside"
+                         "nav content content content aside"
+                         "nav content content content aside"
+                         "footer footer footer footer footer";
+}
+
+@media screen and (max-width: 600px) {
+    section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr 1fr 1fr 1fr;
+    grid-template-areas: "header"
+                         "content"
+                         "content"
+                         "content"
+                         "aside"
+                         "nav"
+                         "footer";
+}
+}
+
+header {
+    background-color: green;
+    grid-area: header;
+}
+
+nav {
+    background-color: blue;
+    grid-area: nav;
+}
+
+.content {
+    background-color: yellow;
+    grid-area: content;
+}
+
+aside {
+    background-color: orange;
+    grid-area: aside;
+}
+
+footer {
+    background-color: red;
+    grid-area: footer;
+}
